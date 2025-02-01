@@ -1,4 +1,3 @@
-import 'package:e_bookly/Features/Home/presentation/views/widgets/best_seller_item.dart';
 import 'package:e_bookly/Features/Home/presentation/views/widgets/best_seller_list.dart';
 import 'package:e_bookly/Features/Home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:e_bookly/Features/Home/presentation/views/widgets/feature_list_view.dart';
@@ -54,4 +53,3 @@ class HomeViewBody extends StatelessWidget {
 }
 
 //;;;;;
-

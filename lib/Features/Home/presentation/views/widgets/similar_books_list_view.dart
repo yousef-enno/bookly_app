@@ -12,8 +12,8 @@ class SimilarBooksListView extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return const Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 5),
-              child:  ListViewItem(),
+              padding: EdgeInsets.symmetric(horizontal: 5),
+              child: ListViewItem(),
             );
           }),
     );

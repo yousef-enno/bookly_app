@@ -8,30 +8,29 @@ class SimilarBooksDetailsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    return  Column(
+    return Column(
       children: [
-         Padding(
-                  padding: EdgeInsets.symmetric(horizontal: width * 0.19),
-                  child: const  ListViewItem(),
-                ),
-              const   SizedBox(
-                  height: 43,
-                ),
-                Text(
-                  'The Jungel Book',
-                  style:
-                      Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
-                ),
-           const      SizedBox(
-                  height: 6,
-                ),
-                Text(
-                  'Rudyard Kipling',
-                  style: Styles.textStyle18.copyWith(
-                    fontStyle: FontStyle.italic,
-                    color:const  Color.fromARGB(255, 141, 139, 150),
-                  ),
-                ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: width * 0.19),
+          child: const ListViewItem(),
+        ),
+        const SizedBox(
+          height: 43,
+        ),
+        Text(
+          'The Jungel Book',
+          style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(
+          height: 6,
+        ),
+        Text(
+          'Rudyard Kipling',
+          style: Styles.textStyle18.copyWith(
+            fontStyle: FontStyle.italic,
+            color: const Color.fromARGB(255, 141, 139, 150),
+          ),
+        ),
       ],
     );
   }
