@@ -8,7 +8,7 @@ import 'package:e_bookly/core/utils/api_services.dart';
 class HomeRepoImpl implements HomeRepo {
   final ApiServices apiServices;
 
-  HomeRepoImpl({required this.apiServices});
+  HomeRepoImpl(this.apiServices);
   @override
   Future<Either<Failure, List<BookModel>>> fetchNewestBooks() async {
     try {
