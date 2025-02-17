@@ -18,7 +18,7 @@ class HomeRepoImpl implements HomeRepo {
 
       List<BookModel> books = [];
       for (var item in data['items']) {
-        books.add(item);
+        books.add(BookModel.fromJson(item));
       }
       return right(books);
     } catch (e) {
@@ -38,7 +38,7 @@ class HomeRepoImpl implements HomeRepo {
 
       List<BookModel> books = [];
       for (var item in data['items']) {
-        books.add(item);
+        books.add(BookModel.fromJson(item));
       }
       return right(books);
     } catch (e) {
