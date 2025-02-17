@@ -3,5 +3,6 @@
         "Bookly",
         "Jungel",
         "Sectra"
-    ]
+    ],
+    "github.copilot.chat.codeGeneration.useInstructionFiles": false
 }

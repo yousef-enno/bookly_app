@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_bookly/core/utils/assets.dart';
+import 'package:e_bookly/core/utils/widgets/custom_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ListViewItem extends StatelessWidget {
@@ -11,13 +12,7 @@ class ListViewItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(16),
       child: AspectRatio(
         aspectRatio: 2.6 / 4,
-        child: CachedNetworkImage(
-          fit: BoxFit.fill,
-          imageUrl: imageUrl,
-          placeholder: (context, url) =>
-              const Center(child: CircularProgressIndicator()),
-          errorWidget: (context, url, error) => const Icon(Icons.error),
-        ),
+        child: CustomNetworkImage(imageUrl: imageUrl)
       ),
     );
   }

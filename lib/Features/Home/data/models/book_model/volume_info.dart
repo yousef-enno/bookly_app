@@ -22,8 +22,10 @@ class VolumeInfo extends Equatable {
   final String? previewLink;
   final String? infoLink;
   final String? canonicalVolumeLink;
+  final List<String>? author;
 
   const VolumeInfo({
+    this.author,
     this.title,
     this.publishedDate,
     this.industryIdentifiers,
@@ -35,7 +37,7 @@ class VolumeInfo extends Equatable {
     this.allowAnonLogging,
     this.contentVersion,
     this.panelizationSummary,
-   required this.imageLinks,
+    required this.imageLinks,
     this.language,
     this.previewLink,
     this.infoLink,
@@ -43,6 +45,7 @@ class VolumeInfo extends Equatable {
   });
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
+       author: (json['authors'] as List<dynamic>?)?.cast<String>(),
         title: json['title'] as String?,
         publishedDate: json['publishedDate'] as String?,
         industryIdentifiers: (json['industryIdentifiers'] as List<dynamic>?)
@@ -54,7 +57,7 @@ class VolumeInfo extends Equatable {
                 json['readingModes'] as Map<String, dynamic>),
         pageCount: json['pageCount'] as int?,
         printType: json['printType'] as String?,
-        categories:(json['categories'] as List<dynamic>?)?.cast<String>(),
+        categories: (json['categories'] as List<dynamic>?)?.cast<String>(),
         maturityRating: json['maturityRating'] as String?,
         allowAnonLogging: json['allowAnonLogging'] as bool?,
         contentVersion: json['contentVersion'] as String?,
@@ -62,7 +65,8 @@ class VolumeInfo extends Equatable {
             ? null
             : PanelizationSummary.fromJson(
                 json['panelizationSummary'] as Map<String, dynamic>),
-        imageLinks: ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
+        imageLinks:
+            ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
         language: json['language'] as String?,
         previewLink: json['previewLink'] as String?,
         infoLink: json['infoLink'] as String?,
@@ -70,6 +74,7 @@ class VolumeInfo extends Equatable {
       );
 
   Map<String, dynamic> toJson() => {
+    'author':author,
         'title': title,
         'publishedDate': publishedDate,
         'industryIdentifiers':
@@ -92,6 +97,7 @@ class VolumeInfo extends Equatable {
   @override
   List<Object?> get props {
     return [
+      author,
       title,
       publishedDate,
       industryIdentifiers,
